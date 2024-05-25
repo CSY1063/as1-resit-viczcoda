@@ -1,0 +1,185 @@
+/* images */
+body {
+    margin: 0em;
+    background-color: #C5C5C5;
+}
+
+/* title header */
+body header h1 {
+    background-color: #183059;
+    color: rgb(246, 246, 246);
+    grid-area: h1;
+    border-style: solid;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-size: 2em;
+    display: flex;
+    justify-content: space-evenly;
+    font-style: italic;
+    box-shadow: 10px 10px #4C5B61;
+
+
+}
+
+
+body header {
+    display: flex;
+    justify-content: space-evenly;
+    justify-content: center;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    margin-bottom: 4em;
+    margin-top: 2em;
+
+}
+
+
+
+/* smaller links */
+nav {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: #495867;
+    grid-area: nav;
+    border-left: #ffffff;
+    border-right: #ffffff;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    margin-top: 0em;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+
+main {
+    background-color: #AB92BF;
+    color: rgb(0, 0, 0);
+    grid-area: main;
+    border-radius: 25px;
+    margin: 3em;
+    
+}
+
+aside img {
+    justify-content: center;
+    grid-area: auto;
+}
+
+aside {
+    background-color: #C04ABC;
+    height: 20em;
+    grid-area: aside;
+    border-radius: 25px;
+    padding-bottom: 10em;
+    margin: 3em;
+}
+
+footer {
+    background-color: #000000;
+    color: rgb(0, 0, 0);
+    grid-area: footer;
+    margin-top: 20em;
+    color: white;
+    padding: 2em;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "nav nav nav nav"
+        " h1 h1 h1 h1"
+        "main main aside aside"
+        "footer footer footer footer"
+}
+
+nav ul ul {
+    position: absolute;
+    display: block;
+    background-color: rgb(41, 41, 40);
+    width: 100%;
+    padding: 0;
+    transform: translate(0, -100%);
+    z-index: -1;
+    transition: all 0.3s ease-in;
+    border-radius: 25px;
+    margin: 0.2em;
+}
+
+.circle {
+    position: relative;
+    top: 52em;
+    right: 50em;
+    width: 10em;
+    height: 10em;
+    background-color: #AB92BF;
+    border-radius: 100%;
+    animation: move_the_circle 10s infinite;
+}
+
+
+nav>ul>li {
+    position: relative;
+    width: 100%;
+}
+
+
+nav>ul>li:hover ul {
+    transform: translate(0, 0);
+    z-index: 1;
+}
+
+
+
+nav ul ul li:hover {
+    background-color: rgb(138, 114, 17);
+}
+
+
+@keyframes move_the_circle {
+    0% {
+        transform: translate(0, 0);
+
+
+    }
+
+    50% {
+        transform: translate(60em, 0);
+        width: 5em;
+        height: 5em;
+        background-color: #C04ABC;
+    }
+
+    51% {
+        background-color: rgb(231, 31, 161);
+    }
+
+    54% {
+        background-color: #854cad;
+    }
+
+    57% {
+        background-color: #C5C5C5;
+    }
+
+    58% {
+        background-color: #C5C5C5;
+    }
+
+    59% {
+        background-color: #C5C5C5;
+    }
+
+    70% {
+        background-color: #7151b1;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        width: 10em;
+        height: 10em;
+    }
+}
